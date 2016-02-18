@@ -1,2 +1,2 @@
 # Algorithms
-A generic implementation of a few basic algorithm
+A generic implementation of a few basic algorithms in C++
