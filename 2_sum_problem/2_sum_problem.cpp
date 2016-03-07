@@ -12,16 +12,16 @@
 */
 
 void print2Sums(std::vector<int>& arr, int k)   {
-    std::vector<bool> hash(false,k);
+    std::vector<int> hash(k,0);
     for (auto i: arr)   {
         if (i<k)    {
             int temp=k-i;
-            if(hash[temp]==1)   {
+            if(hash[temp]>0)   {
                 std::cout<<"("<<temp<<", "<<i<<"), ";
-                hash[temp] = false;
+                hash[temp]--;
             }
             else
-                hash[i]=true;
+                hash[i]++;
         }
     }
 }
